@@ -105,7 +105,7 @@ module RgDishes
   #dinner inspire returns all dishes in hash
   def inspire
     table = table_method
-    return list_all_dishes(table).join("\n")
+    list_all_dishes(table).join("\n")
   end
 
   #----------------
@@ -138,7 +138,7 @@ module RgDishes
       shopping_list = make_shopping_list(ingredients_array, no_ingredients_dishes).join("\n")
 
       #returns shopping list_all_dishes
-      return shopping_list
+      shopping_list
     end
   end
 
