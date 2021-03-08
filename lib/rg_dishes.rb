@@ -70,7 +70,7 @@ module RgDishes
 
   #returns shopping list array
   def make_shopping_list(ingr_array, no_ingr_dishes)
-    ingredients_string = ingr_array.uniq.sort.join("\n")
+    ingredients_string = ingr_array.uniq.sort.join(",\n")
     shopping_list = []
     if !ingredients_string.empty?
       shopping_list << ingredients_string
