@@ -25,7 +25,7 @@ class RgDishesTest < Minitest::Test
 
   def test_combine_known_and_unknown
     output = RgDishes::combine(["carbonara", "bob"])
-    assert_equal "bacon,\negg,\npecorino,\nspaghetti\nI don't know the ingredients for bob.", output
+    assert_equal "bacon,\negg,\npecorino,\nspaghetti\n\nI don't know the ingredients for bob.", output
   end
 
   def test_combine_no_dishes

@@ -82,7 +82,7 @@ module RgDishes
       shopping_list << ingredients_string
     end
     if !no_ingr_dishes.empty?
-      shopping_list << "\nI don't know the ingredients for #{sentence_join(no_ingr_dishes)}."
+      shopping_list << "I don't know the ingredients for #{sentence_join(no_ingr_dishes)}."
     end
     shopping_list
   end
@@ -141,7 +141,7 @@ module RgDishes
       ingredients_array = build_counted_dishes_array(ingredients_num_hash)
 
       #builds shopping list
-      shopping_list = make_shopping_list(ingredients_array, no_ingredients_dishes).join("\n")
+      shopping_list = make_shopping_list(ingredients_array, no_ingredients_dishes).join("\n\n")
 
       #returns shopping list_all_dishes
       shopping_list
