@@ -68,6 +68,12 @@ module RgDishes
     ing_array
   end
 
+  def self.sentence_join(array)
+    return nil if array.nil?
+    return array[0] if array.length == 1
+    return array[0..-2].join(', ') + " and " + array[-1] if array.length > 1
+  end
+
   #returns shopping list array
   def make_shopping_list(ingr_array, no_ingr_dishes)
     ingredients_string = ingr_array.uniq.sort.join(",\n")
@@ -76,7 +82,8 @@ module RgDishes
       shopping_list << ingredients_string
     end
     if !no_ingr_dishes.empty?
-      shopping_list << "I don't know the ingredients for #{no_ingr_dishes.join(", ")}."
+
+      shopping_list << "I don't know the ingredients for #{sentence_join(no_ingr_dishes)}."
     end
     shopping_list
   end
