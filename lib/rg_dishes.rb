@@ -82,8 +82,7 @@ module RgDishes
       shopping_list << ingredients_string
     end
     if !no_ingr_dishes.empty?
-
-      shopping_list << "I don't know the ingredients for #{sentence_join(no_ingr_dishes)}."
+      shopping_list << "\nI don't know the ingredients for #{sentence_join(no_ingr_dishes)}."
     end
     shopping_list
   end
